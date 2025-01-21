@@ -1,5 +1,5 @@
 import streamlit as st
-import extracter 
+import api
 import pandas as pd
 import json
 
