@@ -14,7 +14,7 @@ with col1:
 
 if st.button("submit"):
     with col2 :
-        a = extracter.def_prompt(data)
+        a = api.def_prompt(data)
         try:
             result = json.loads(a)
             df = pd.DataFrame(result.items(),columns=["Measures","Values"])  # This will print the parsed dictionary if the response is valid JSON
