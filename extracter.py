@@ -1,6 +1,6 @@
 import openai 
 # from openai_apikey import apik
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 
 def api_out(prompt):
