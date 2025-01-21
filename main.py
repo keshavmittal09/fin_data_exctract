@@ -1,5 +1,5 @@
 import streamlit as st
-import api
+import extracter
 import pandas as pd
 import json
 
@@ -14,7 +14,7 @@ with col1:
 
 if st.button("submit"):
     with col2 :
-        a = api.def_prompt(data)
+        a = extracter.def_prompt(data)
         try:
             result = json.loads(a)
             df = pd.DataFrame(result.items(),columns=["Measures","Values"])  # This will print the parsed dictionary if the response is valid JSON
