@@ -1,9 +1,10 @@
 import openai 
-from openai_apikey import apik
-
+# from openai_apikey import apik
+from dotenv import load_dotenv
+import os
 
 def api_out(prompt):
-    openai.api_key=apik
+    openai.api_key=os.getenv("apik")
 
     response = openai.chat.completions.create(
         model="gpt-4o-mini",    
