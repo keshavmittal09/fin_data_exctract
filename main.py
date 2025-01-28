@@ -8,7 +8,7 @@ st.title("💬📃📄EXCTRACTER")
 
 col1,col2 = st.columns([3,2])
 text = ""
-data = " "
+# data = " "
 
 with col1:
     data = st.text_area("PASTE THE ARTICLE HERE 📄:-",height=400)
@@ -19,7 +19,7 @@ with col1:
         with pdfplumber.open(uploaded_file) as pdf:
             for y,i in enumerate(pdf.pages):
                 text += i.extract_text()
-            data += text
+            data = text
 if st.button("submit"):
     with col2 :
         a = extracter.def_prompt(data)
