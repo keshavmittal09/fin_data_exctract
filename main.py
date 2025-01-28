@@ -13,13 +13,13 @@ data = " "
 with col1:
     data = st.text_area("PASTE THE ARTICLE HERE 📄:-",height=400)
 
-uploaded_file = st.file_uploader("Choose a file",type=["csv", "txt", "pdf", "png", "jpg"])
-
-if uploaded_file is not None :
-    with pdfplumber.open(uploaded_file) as pdf:
-        for y,i in enumerate(pdf.pages):
-            text += i.extract_text()
-        data += text
+    uploaded_file = st.file_uploader("Choose a file",type=["csv", "txt", "pdf", "png", "jpg"])
+    
+    if uploaded_file is not None :
+        with pdfplumber.open(uploaded_file) as pdf:
+            for y,i in enumerate(pdf.pages):
+                text += i.extract_text()
+            data += text
 if st.button("submit"):
     with col2 :
         a = extracter.def_prompt(data)
