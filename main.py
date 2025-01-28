@@ -11,6 +11,10 @@ col1,col2 = st.columns([3,2])
 with col1:
     data = st.text_area("enter",height=400)
 
+uploaded_file = st.file_uploader("Choose a file",type=["csv", "txt", "pdf", "png", "jpg"])
+if uploaded_file is not None:
+  data = uploaded_file
+
 
 if st.button("submit"):
     with col2 :
