@@ -7,6 +7,9 @@ Financial Data Extractor is a Python-based tool designed to extract and process 
 - **Data Extraction**: Retrieve financial data from multiple sources.
 - **Data Cleaning**: Process and clean extracted data for consistency and accuracy.
 - **Data Analysis**: Perform basic analysis on financial data to derive insights.
+## Live Demo
+
+Check out the live deployed version here: [https://dataex-ai.streamlit.app/](https://dataex-ai.streamlit.app/)
 
 ## Installation
 
